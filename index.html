@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción De Torneo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <h1>Inscripción De Torneo</h1>
+     </header>
+     <ul>
+        <li>Catálogo</li>
+        <li>Contacto</li>
+        <li>Torneo</li>
+        <li>About</li>
+     </ul>
+    
+      <div class="Formulario">
+        <form id="inscripcion">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+    
+          <label for="edad">Fecha De Nacimiento:</label>
+          <input type="date" id="edad" name="edad" required min="14">
+    
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="juego">Torneo:</label>
+          <select id="juego" name="juego" required>
+            <option value="lol">League of Legends</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="valorant">Valorant</option>
+          </select>
+    
+           <label for="pago">Pago Realizado (S/):</label>
+           <input type="number" id="pago" name="pago" required>
+
+           <label for="vuelto">Vuelto (S/):</label>
+           <input type="text" id="vuelto" name="vuelto" disabled>
+
+    
+          <button type="submit">Inscribirse</button>
+        </form>
+        <div id="success-message" style="display:none;">¡Inscripción Exitosa!</div>
+      </div>
+
+      <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
